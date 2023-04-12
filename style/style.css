@@ -7,29 +7,80 @@
 header .conteyner {
   font-family: "Roboto", sans-serif;
   max-width: 1200px;
-  height: 100%;
+  max-height: 100%;
   margin: 0 auto;
 }
-header .header__title {
-  max-height: 100%;
-  max-width: 100%;
-}
-header .header__title .header__wrapper-fone {
-  max-width: 100%;
-}
-header .header__title .header__wrapper-fone img {
-  max-width: 100%;
-  position: absolute;
-  max-height: 100%;
-}
-header .header__title .header__wrapper-fone h1 {
+header .header__wrapper-fone {
+  background-image: url(/imeg/fonheader.png);
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  height: 640px;
   position: relative;
+}
+@media (max-width: 768px) {
+  header .header__wrapper-fone {
+    background-image: url(/imeg/fonheader768.png);
+    height: 410px;
+  }
+}
+@media (max-width: 360px) {
+  header .header__wrapper-fone {
+    background-image: url(/imeg/fonheader360.png);
+    height: 119px;
+  }
+}
+@media (max-width: 1000px) {
+  header .header__wrapper-fone {
+    background-image: url(/imeg/fonheader1000.png);
+    height: 530px;
+  }
+}
+@media (max-width: 920px) {
+  header .header__wrapper-fone {
+    background-image: url(/imeg/fonheader920.png);
+    height: 490px;
+  }
+}
+@media (max-width: 650px) {
+  header .header__wrapper-fone {
+    background-image: url(/imeg/fonheader650.png);
+    height: 345px;
+  }
+}
+header .header__wrapper-fone h1 {
+  position: absolute;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 72px;
   color: #ffffff;
-  padding: 428px 0 40px 64px;
+  padding: 40px 0 40px 64px;
+  bottom: 0px;
+}
+@media (max-width: 768px) {
+  header .header__wrapper-fone h1 {
+    font-size: 40px;
+    padding: 40px 0 160px 64px;
+  }
+}
+@media (max-width: 1000px) {
+  header .header__wrapper-fone h1 {
+    font-size: 48px;
+    padding: 40px 0 140px 64px;
+  }
+}
+@media (max-width: 650px) {
+  header .header__wrapper-fone h1 {
+    font-size: 35px;
+    padding: 40px 0 140px 25px;
+  }
+}
+@media (max-width: 360px) {
+  header .header__wrapper-fone h1 {
+    font-size: 25px;
+    padding: 40px 0 140px 25px;
+  }
 }
 
 .header__box-text {
@@ -139,7 +190,7 @@ main .main-conteyner {
   padding: 0 64px;
   background: #e8e4dc;
 }
-@media (max-width: 360px) {
+@media (max-width: 700px) {
   main .main-conteyner {
     display: none;
   }
@@ -286,14 +337,12 @@ main .main-conteyner2 {
 }
 main .main-conteyner2 .main__sidebar {
   max-width: 50%;
-  min-height: 500px;
   background-color: #213f39;
   padding-left: 64px;
   padding-right: 87px;
 }
 @media (max-width: 768px) {
   main .main-conteyner2 .main__sidebar {
-    min-height: 200px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -364,6 +413,11 @@ main .main-conteyner2 .main__sidebar2 .main__aside2 .main__aside2-info h3 {
   color: #000000;
   padding-top: 305px;
 }
+@media (max-width: 768px) {
+  main .main-conteyner2 .main__sidebar2 .main__aside2 .main__aside2-info h3 {
+    padding-top: 100px;
+  }
+}
 main .main-conteyner3 {
   font-family: "Roboto", sans-serif;
   max-width: 1200px;
@@ -432,7 +486,10 @@ main .main__wrapper-aside {
   }
 }
 main .main__wrapper-aside .main__wrapper-aside-conteyner .main__wrapper-aside-plan {
-  max-width: 50%;
+  background-image: url(/imeg/plan.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   height: 100%;
 }
 main .main__wrapper-aside .main__wrapper-aside-info {
@@ -574,8 +631,10 @@ main .main__conteyner-bisness .main__information-all {
   flex: 0 1 50%;
   height: 844px;
 }
-main .main__conteyner-bisness .main__information-all .main__information-all2 img {
+main .main__conteyner-bisness .main__information-all .main__information-all2 {
+  background-image: url(/imeg/flouver2.png);
   width: 100%;
+  height: 100%;
 }
 main .main__conteyner-bisness .main__information-all .main__information-all-text {
   width: 50%;

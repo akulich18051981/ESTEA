@@ -6,33 +6,64 @@
 
 header {
   .conteyner {
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
-    height: 100%;
+    max-height: 100%;
     margin: 0 auto;
   }
-  .header__title {
-    max-height: 100%;
-    max-width: 100%;
-    .header__wrapper-fone {
-      max-width: 100%;
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      // background-image: url(/imeg/fonheader.png);
-      img {
-        max-width: 100%;
-        position: absolute;
-        max-height: 100%;
+  .header__wrapper-fone {
+    background-image: url(/imeg/fonheader.png);
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    height: 640px;
+    position: relative;
+    @media (max-width: 768px) {
+      background-image: url(/imeg/fonheader768.png);
+      height: 410px;
+    }
+    @media (max-width: 360px) {
+      background-image: url(/imeg/fonheader360.png);
+      height: 119px;
+    }
+    @media (max-width: 1000px) {
+      background-image: url(/imeg/fonheader1000.png);
+      height: 530px;
+    }
+    @media (max-width: 920px) {
+      background-image: url(/imeg/fonheader920.png);
+      height: 490px;
+    }
+    @media (max-width: 650px) {
+      background-image: url(/imeg/fonheader650.png);
+      height: 345px;
+    }
+    h1 {
+      position: absolute;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72px;
+      color: $colorwhite;
+      padding: 40px 0 40px 64px;
+      bottom: 0px;
+      @media (max-width: 768px) {
+        font-size: 40px;
+        padding: 40px 0 160px 64px;
       }
-
-      h1 {
-        position: relative;
-        font-family: "Roboto", sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 72px;
-        color: #ffffff;
-        padding: 428px 0 40px 64px;
+      @media (max-width: 1000px) {
+        font-size: 48px;
+        padding: 40px 0 140px 64px;
+      }
+      @media (max-width: 920px) {
+      }
+      @media (max-width: 650px) {
+        font-size: 35px;
+        padding: 40px 0 140px 25px;
+      }
+      @media (max-width: 360px) {
+        font-size: 25px;
+        padding: 40px 0 140px 25px;
       }
     }
   }
@@ -49,11 +80,11 @@ header {
 
   h2 {
     padding: 86px 65px;
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     font-style: normal;
     font-weight: 400;
     font-size: 34px;
-    color: #ffffff;
+    color: $colorwhite;
     @media (max-width: 768px) {
       font-size: 24px;
       padding: 20px 25px;
@@ -77,7 +108,7 @@ header {
 
   h2 {
     padding: 64px;
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     font-weight: 400;
     font-size: 28px;
     color: #000000;
@@ -121,13 +152,13 @@ main {
     display: flex;
     flex: 0 1 33.333%;
     justify-items: center;
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     padding: 0 64px;
     background: #e8e4dc;
-    @media (max-width: 360px) {
+    @media (max-width: 700px) {
       display: none;
     }
     .main__inform {
@@ -200,7 +231,7 @@ main {
     margin: 0 auto;
     height: 600px;
     position: relative;
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       height: 400px;
     }
     @media (max-width: 360px) {
@@ -217,7 +248,7 @@ main {
       position: absolute;
       bottom: 0;
       right: 0;
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         max-width: 100%;
         max-height: 250px;
       }
@@ -230,21 +261,20 @@ main {
         font-weight: 400;
         font-size: 20px;
         color: #000000;
-        font-family: "Roboto", sans-serif;
+        font-family: $font;
         padding: 32px 64px;
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
           padding: 12px 20px;
         }
         @media (max-width: 360px) {
-          color: #ffffff;
+          color: $colorwhite;
           padding: 5px 25px;
-          
         }
       }
     }
   }
   .main-conteyner2 {
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -254,12 +284,10 @@ main {
     flex-wrap: wrap;
     .main__sidebar {
       max-width: 50%;
-      min-height: 500px;
       background-color: #213f39;
       padding-left: 64px;
       padding-right: 87px;
       @media (max-width: 768px) {
-        min-height: 200px;
         padding-left: 25px;
         padding-right: 25px;
       }
@@ -276,7 +304,7 @@ main {
           padding-bottom: 57px;
           font-weight: 400;
           font-size: 48px;
-          color: #ffffff;
+          color: $colorwhite;
           @media (max-width: 768px) {
             font-size: 32px;
             padding-top: 40px;
@@ -291,7 +319,7 @@ main {
         h3 {
           font-weight: 400;
           font-size: 34px;
-          color: #ffffff;
+          color: $colorwhite;
           @media (max-width: 768px) {
             font-size: 24px;
           }
@@ -314,18 +342,21 @@ main {
         .main__aside2-info {
           h3 {
             bottom: 0px;
-            font-family: "Roboto", sans-serif;
+            font-family: $font;
             font-weight: 400;
             font-size: 28px;
             color: #000000;
             padding-top: 305px;
+            @media (max-width: 768px) {
+              padding-top: 100px;
+            }
           }
         }
       }
     }
   }
   .main-conteyner3 {
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -334,8 +365,8 @@ main {
     }
     .main__content {
       padding: 107px 277px 107px 64px;
-      background-color: #ffffff;
-      @media (max-width: 768px){
+      background-color: $colorwhite;
+      @media (max-width: 768px) {
         padding: 25px 0 0 0;
       }
 
@@ -370,7 +401,7 @@ main {
     }
   }
   .main__wrapper-aside {
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
     height: 768px;
     margin: 0 auto;
@@ -381,7 +412,10 @@ main {
     }
     .main__wrapper-aside-conteyner {
       .main__wrapper-aside-plan {
-        max-width: 50%;
+        background-image: url(/imeg/plan.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
         height: 100%;
       }
     }
@@ -414,7 +448,7 @@ main {
     }
   }
   .main__conteyner-bisness {
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
     margin: 0 auto;
     @media (max-width: 360px) {
@@ -505,10 +539,11 @@ main {
       display: flex;
       flex: 0 1 50%;
       height: 844px;
-      
-      .main__information-all2{
-        img{
-          width: 100%;}
+
+      .main__information-all2 {
+        background-image: url(/imeg/flouver2.png);
+        width: 100%;
+        height: 100%;
       }
       .main__information-all-text {
         width: 50%;
@@ -516,8 +551,7 @@ main {
         .main__information-all-text2 {
           max-width: 50%px;
           height: 676px;
-          background: #ffffff;
-         
+          background: $colorwhite;
 
           h3 {
             font-style: normal;
@@ -573,13 +607,13 @@ main {
           max-width: 360px;
           font-weight: 400;
           font-size: 48px;
-          color: #ffffff;
+          color: $colorwhite;
         }
         p {
           max-width: 360px;
           font-weight: 400;
           font-size: 20px;
-          color: #ffffff;
+          color: $colorwhite;
           padding-top: 17px;
         }
       }
@@ -587,7 +621,7 @@ main {
         width: 100%;
         h2 {
           max-width: 474px;
-          border-bottom: #ffffff solid 1px;
+          border-bottom: $colorwhite solid 1px;
           padding-top: 62px;
           @media (max-width: 768px) {
             padding-top: 47px;
@@ -606,14 +640,14 @@ footer {
   .footer__conteyner {
     display: flex;
     flex: 0 1 50%;
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     background: #213f39;
     .footer__aside {
       display: flex;
-
+      
       flex: 0 1 33.333%;
 
       .footer__aside-inform {
@@ -631,7 +665,6 @@ footer {
           @media (max-width: 360px) {
             padding: 15px 20px;
             padding-top: 30px;
-            
           }
         }
         .footer__aside-inform-info1 {
@@ -645,7 +678,7 @@ footer {
             padding-bottom: 5px;
             font-weight: 400;
             font-size: 19px;
-            color: #ffffff;
+            color: $colorwhite;
           }
         }
         .footer__aside-inform-info2 {
@@ -661,7 +694,7 @@ footer {
               padding-bottom: 5px;
               font-weight: 400;
               font-size: 19px;
-              color: #ffffff;
+              color: $colorwhite;
               padding-right: 9px;
               @media (max-width: 360px) {
                 padding-top: 25px;
@@ -688,14 +721,14 @@ footer {
           padding-bottom: 5px;
           font-weight: 400;
           font-size: 19px;
-          color: #ffffff;
+          color: $colorwhite;
           padding-right: 9px;
         }
       }
     }
   }
   .footer__conteyner2 {
-    font-family: "Roboto", sans-serif;
+    font-family: $font;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -711,7 +744,7 @@ footer {
         padding-bottom: 2px;
         font-weight: 400;
         font-size: 13px;
-        color: #ffffff;
+        color: $colorwhite;
       }
     }
   }
