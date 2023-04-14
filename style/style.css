@@ -1,3 +1,4 @@
+@import url(//vars/_vars.scss);
 * {
   margin: 0;
   padding: 0;
@@ -18,18 +19,6 @@ header .header__wrapper-fone {
   height: 640px;
   position: relative;
 }
-@media (max-width: 768px) {
-  header .header__wrapper-fone {
-    background-image: url(/imeg/fonheader768.png);
-    height: 410px;
-  }
-}
-@media (max-width: 360px) {
-  header .header__wrapper-fone {
-    background-image: url(/imeg/fonheader360.png);
-    height: 119px;
-  }
-}
 @media (max-width: 1000px) {
   header .header__wrapper-fone {
     background-image: url(/imeg/fonheader1000.png);
@@ -42,44 +31,56 @@ header .header__wrapper-fone {
     height: 490px;
   }
 }
+@media (max-width: 768px) {
+  header .header__wrapper-fone {
+    background-image: url(/imeg/fonheader768.png);
+    height: 410px;
+  }
+}
 @media (max-width: 650px) {
   header .header__wrapper-fone {
     background-image: url(/imeg/fonheader650.png);
     height: 345px;
   }
 }
-header .header__wrapper-fone h1 {
+@media (max-width: 360px) {
+  header .header__wrapper-fone {
+    background-image: url(/imeg/fonheader360.png);
+    height: 192px;
+  }
+}
+header .header__wrapper-fone .header__wrapper-fone-list {
   position: absolute;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 72px;
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 40px 0 40px 64px;
   bottom: 0px;
 }
 @media (max-width: 768px) {
-  header .header__wrapper-fone h1 {
+  header .header__wrapper-fone .header__wrapper-fone-list {
     font-size: 40px;
     padding: 40px 0 160px 64px;
   }
 }
 @media (max-width: 1000px) {
-  header .header__wrapper-fone h1 {
+  header .header__wrapper-fone .header__wrapper-fone-list {
     font-size: 48px;
     padding: 40px 0 140px 64px;
   }
 }
 @media (max-width: 650px) {
-  header .header__wrapper-fone h1 {
+  header .header__wrapper-fone .header__wrapper-fone-list {
     font-size: 35px;
     padding: 40px 0 140px 25px;
   }
 }
 @media (max-width: 360px) {
-  header .header__wrapper-fone h1 {
-    font-size: 25px;
-    padding: 40px 0 140px 25px;
+  header .header__wrapper-fone .header__wrapper-fone-list {
+    font-size: 23px;
+    padding: 40px 0 80px 15px;
   }
 }
 
@@ -95,22 +96,22 @@ header .header__wrapper-fone h1 {
     min-height: 0px;
   }
 }
-.header__box-text h2 {
+.header__box-text .header__box-text-info {
   padding: 86px 65px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 34px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  .header__box-text h2 {
+  .header__box-text .header__box-text-info {
     font-size: 24px;
     padding: 20px 25px;
   }
 }
 @media (max-width: 360px) {
-  .header__box-text h2 {
+  .header__box-text .header__box-text-info {
     padding: 26px 25px;
   }
 }
@@ -126,10 +127,9 @@ header .header__wrapper-fone h1 {
 @media (max-width: 768px) {
   .header__box-text2 {
     max-width: 100%;
-    min-height: 0px;
   }
 }
-.header__box-text2 h2 {
+.header__box-text2 .header__box-title-info {
   padding: 64px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -137,12 +137,12 @@ header .header__wrapper-fone h1 {
   color: #000000;
 }
 @media (max-width: 768px) {
-  .header__box-text2 h2 {
+  .header__box-text2 .header__box-title-info {
     padding: 25px;
   }
 }
 @media (max-width: 360px) {
-  .header__box-text2 h2 {
+  .header__box-text2 .header__box-title-info {
     font-size: 25px;
     padding: 28px;
   }
@@ -200,13 +200,13 @@ main .main-conteyner .main__inform {
   height: 100%;
   padding-right: 40px;
 }
-main .main-conteyner .main__inform h3 {
+main .main-conteyner .main__inform .main__inform-text {
   border-bottom: 1px #000 solid;
   padding-bottom: 31px;
   padding-top: 91px;
 }
 @media (max-width: 768px) {
-  main .main-conteyner .main__inform h3 {
+  main .main-conteyner .main__inform .main__inform-text {
     padding-top: 31px;
     padding-bottom: 11px;
   }
@@ -307,7 +307,7 @@ main .main__wrapper .main__wrapper-description {
     background-color: rgba(166, 153, 140, 0.6705882353);
   }
 }
-main .main__wrapper .main__wrapper-description p {
+main .main__wrapper .main__wrapper-description .main__wrapper-description-text {
   font-weight: 400;
   font-size: 20px;
   color: #000000;
@@ -315,13 +315,13 @@ main .main__wrapper .main__wrapper-description p {
   padding: 32px 64px;
 }
 @media (max-width: 768px) {
-  main .main__wrapper .main__wrapper-description p {
+  main .main__wrapper .main__wrapper-description .main__wrapper-description-text {
     padding: 12px 20px;
   }
 }
 @media (max-width: 360px) {
-  main .main__wrapper .main__wrapper-description p {
-    color: #ffffff;
+  main .main__wrapper .main__wrapper-description .main__wrapper-description-text {
+    color: #FFFFFF;
     padding: 5px 25px;
   }
 }
@@ -356,34 +356,34 @@ main .main-conteyner2 .main__sidebar {
     padding-right: 25px;
   }
 }
-main .main-conteyner2 .main__sidebar .main__aside h2 {
+main .main-conteyner2 .main__sidebar .main__aside .main__aside-text {
   padding-top: 97px;
   padding-bottom: 57px;
   font-weight: 400;
   font-size: 48px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  main .main-conteyner2 .main__sidebar .main__aside h2 {
+  main .main-conteyner2 .main__sidebar .main__aside .main__aside-text {
     font-size: 32px;
     padding-top: 40px;
     padding-bottom: 35px;
   }
 }
 @media (max-width: 360px) {
-  main .main-conteyner2 .main__sidebar .main__aside h2 {
+  main .main-conteyner2 .main__sidebar .main__aside .main__aside-text {
     padding-top: 27px;
     padding-bottom: 25px;
     font-size: 20px;
   }
 }
-main .main-conteyner2 .main__sidebar .main__aside h3 {
+main .main-conteyner2 .main__sidebar .main__aside .main__aside-text2 {
   font-weight: 400;
   font-size: 34px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  main .main-conteyner2 .main__sidebar .main__aside h3 {
+  main .main-conteyner2 .main__sidebar .main__aside .main__aside-text2 {
     font-size: 24px;
   }
 }
@@ -405,7 +405,7 @@ main .main-conteyner2 .main__sidebar2 {
 main .main-conteyner2 .main__sidebar2 .main__aside2 {
   padding: 42px 64px 74px 64px;
 }
-main .main-conteyner2 .main__sidebar2 .main__aside2 .main__aside2-info h3 {
+main .main-conteyner2 .main__sidebar2 .main__aside2 .main__aside2-info .main__aside2-info-text {
   bottom: 0px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -414,7 +414,7 @@ main .main-conteyner2 .main__sidebar2 .main__aside2 .main__aside2-info h3 {
   padding-top: 305px;
 }
 @media (max-width: 768px) {
-  main .main-conteyner2 .main__sidebar2 .main__aside2 .main__aside2-info h3 {
+  main .main-conteyner2 .main__sidebar2 .main__aside2 .main__aside2-info .main__aside2-info-text {
     padding-top: 100px;
   }
 }
@@ -429,46 +429,56 @@ main .main-conteyner3 {
     padding: 27px 25px;
   }
 }
+@media (max-width: 360px) {
+  main .main-conteyner3 {
+    padding: 10px 15px;
+  }
+}
 main .main-conteyner3 .main__content {
   padding: 107px 277px 107px 64px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 @media (max-width: 768px) {
   main .main-conteyner3 .main__content {
     padding: 25px 0 0 0;
   }
 }
-main .main-conteyner3 .main__content p {
+@media (max-width: 360px) {
+  main .main-conteyner3 .main__content {
+    padding: 10px 0 0 0;
+  }
+}
+main .main-conteyner3 .main__content .main__content-text {
   font-weight: 400;
   font-size: 20px;
   color: #000000;
   padding-bottom: 8px;
 }
-main .main-conteyner3 .main__content h2 {
+main .main-conteyner3 .main__content .main__content-text2 {
   font-weight: 400;
   font-size: 48px;
   color: #000000;
   padding-bottom: 107px;
 }
 @media (max-width: 768px) {
-  main .main-conteyner3 .main__content h2 {
+  main .main-conteyner3 .main__content .main__content-text2 {
     padding-bottom: 27px;
     font-size: 38px;
   }
 }
 @media (max-width: 360px) {
-  main .main-conteyner3 .main__content h2 {
-    font-size: 25px;
-    padding-bottom: 20px;
+  main .main-conteyner3 .main__content .main__content-text2 {
+    font-size: 23px;
+    padding-bottom: 15px;
   }
 }
-main .main-conteyner3 .main__content h3 {
+main .main-conteyner3 .main__content .main__content-text3 {
   font-weight: 400;
   font-size: 34px;
   color: #000000;
 }
 @media (max-width: 360px) {
-  main .main-conteyner3 .main__content h3 {
+  main .main-conteyner3 .main__content .main__content-text3 {
     font-size: 20px;
   }
 }
@@ -476,26 +486,41 @@ main .main__wrapper-aside {
   font-family: "Roboto", sans-serif;
   max-width: 1200px;
   height: 768px;
+  max-height: 1000px;
   margin: 0 auto;
   display: flex;
-  flex: 0 1 50%;
 }
-@media (max-width: 768px) {
-  main .main__wrapper-aside {
-    display: none;
-  }
-}
-main .main__wrapper-aside .main__wrapper-aside-conteyner .main__wrapper-aside-plan {
+main .main__wrapper-aside .main__wrapper-aside-plan {
   background-image: url(/imeg/plan.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+}
+@media (max-width: 1000px) {
+  main .main__wrapper-aside .main__wrapper-aside-plan {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  main .main__wrapper-aside .main__wrapper-aside-plan {
+    display: none;
+  }
 }
 main .main__wrapper-aside .main__wrapper-aside-info {
   padding: 66px 64px 0 64px;
   background: #a6998c;
-  max-height: 768px;
+  width: 50%;
+}
+@media (max-width: 1000px) {
+  main .main__wrapper-aside .main__wrapper-aside-info {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  main .main__wrapper-aside .main__wrapper-aside-info {
+    width: 100%;
+    padding: 15px 15px;
+  }
 }
 main .main__wrapper-aside .main__wrapper-aside-info .items {
   padding-bottom: 12px;
@@ -503,6 +528,7 @@ main .main__wrapper-aside .main__wrapper-aside-info .items {
 main .main__wrapper-aside .main__wrapper-aside-info .items2 {
   padding-top: 12px;
   border-top: #000 solid 1px;
+  max-width: 730px;
 }
 main .main__wrapper-aside .main__wrapper-aside-info table {
   font-weight: 400;
@@ -510,6 +536,7 @@ main .main__wrapper-aside .main__wrapper-aside-info table {
   color: #000000;
   text-align: left;
   vertical-align: auto;
+  width: 100%;
 }
 main .main__wrapper-aside .main__wrapper-aside-info table td {
   border-top: #000 solid 1px;
@@ -520,23 +547,26 @@ main .main__wrapper-aside .main__wrapper-aside-info table td tr {
   border-bottom: #000 solid 1px;
 }
 main .main__conteyner-bisness {
+  display: flex;
+  flex-wrap: wrap;
   font-family: "Roboto", sans-serif;
   max-width: 1200px;
   margin: 0 auto;
 }
 @media (max-width: 360px) {
   main .main__conteyner-bisness {
-    display: none;
+    width: 100%;
   }
 }
 main .main__conteyner-bisness .main__bisness-box {
   display: flex;
-  flex: 0 1 33.333%;
+  width: 100%;
 }
 @media (max-width: 360px) {
   main .main__conteyner-bisness .main__bisness-box {
     display: inline-block;
     width: 100%;
+    text-align: center;
   }
 }
 main .main__conteyner-bisness .main__bisness-box .main__bisness1 {
@@ -553,19 +583,24 @@ main .main__conteyner-bisness .main__bisness-box .main__bisness1 {
 @media (max-width: 768px) {
   main .main__conteyner-bisness .main__bisness-box .main__bisness1 {
     width: 100%;
-    padding: 25px 30px 25px 30px;
+    padding: 15px 15px;
   }
 }
-main .main__conteyner-bisness .main__bisness-box .main__bisness1 h3 {
+main .main__conteyner-bisness .main__bisness-box .main__bisness1 .main__bisness1-text {
   font-weight: 400;
   font-size: 30px;
   color: #000000;
   padding-top: 168px;
 }
 @media (max-width: 768px) {
-  main .main__conteyner-bisness .main__bisness-box .main__bisness1 h3 {
+  main .main__conteyner-bisness .main__bisness-box .main__bisness1 .main__bisness1-text {
     font-size: 20px;
     padding-top: 38px;
+  }
+}
+@media (max-width: 360px) {
+  main .main__conteyner-bisness .main__bisness-box .main__bisness1 .main__bisness1-text {
+    padding-top: 8px;
   }
 }
 main .main__conteyner-bisness .main__bisness-box .main__bisness2 {
@@ -582,19 +617,24 @@ main .main__conteyner-bisness .main__bisness-box .main__bisness2 {
 @media (max-width: 768px) {
   main .main__conteyner-bisness .main__bisness-box .main__bisness2 {
     width: 100%;
-    padding: 25px 30px 25px 30px;
+    padding: 15px 15px;
   }
 }
-main .main__conteyner-bisness .main__bisness-box .main__bisness2 h3 {
+main .main__conteyner-bisness .main__bisness-box .main__bisness2 .main__bisness2-text {
   font-weight: 400;
   font-size: 30px;
   color: #000000;
   padding-top: 178px;
 }
 @media (max-width: 768px) {
-  main .main__conteyner-bisness .main__bisness-box .main__bisness2 h3 {
+  main .main__conteyner-bisness .main__bisness-box .main__bisness2 .main__bisness2-text {
     font-size: 20px;
     padding-top: 48px;
+  }
+}
+@media (max-width: 360px) {
+  main .main__conteyner-bisness .main__bisness-box .main__bisness2 .main__bisness2-text {
+    padding-top: 8px;
   }
 }
 main .main__conteyner-bisness .main__bisness-box .main__bisness3 {
@@ -611,41 +651,75 @@ main .main__conteyner-bisness .main__bisness-box .main__bisness3 {
 @media (max-width: 768px) {
   main .main__conteyner-bisness .main__bisness-box .main__bisness3 {
     width: 100%;
-    padding: 25px 30px 25px 30px;
+    padding: 15px 15px;
+    min-width: 250px;
   }
 }
-main .main__conteyner-bisness .main__bisness-box .main__bisness3 h3 {
+main .main__conteyner-bisness .main__bisness-box .main__bisness3 .main__bisness3-text {
   font-weight: 400;
   font-size: 30px;
-  color: #000000;
+  color: #ffffff;
   padding-top: 168px;
 }
 @media (max-width: 768px) {
-  main .main__conteyner-bisness .main__bisness-box .main__bisness3 h3 {
+  main .main__conteyner-bisness .main__bisness-box .main__bisness3 .main__bisness3-text {
     font-size: 20px;
     padding-top: 38px;
   }
 }
+@media (max-width: 360px) {
+  main .main__conteyner-bisness .main__bisness-box .main__bisness3 .main__bisness3-text {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness {
+    width: 100% px;
+    height: 100%;
+  }
+}
 main .main__conteyner-bisness .main__information-all {
   display: flex;
-  flex: 0 1 50%;
   height: 844px;
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__information-all {
+    width: 100% px;
+    height: 100%;
+  }
 }
 main .main__conteyner-bisness .main__information-all .main__information-all2 {
   background-image: url(/imeg/flouver2.png);
   width: 100%;
-  height: 100%;
+  max-height: 844px;
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__information-all .main__information-all2 {
+    display: none;
+  }
 }
 main .main__conteyner-bisness .main__information-all .main__information-all-text {
   width: 50%;
   height: 844px;
 }
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__information-all .main__information-all-text {
+    width: 100%;
+    height: 100%;
+  }
+}
 main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text2 {
   max-width: 50% px;
-  height: 676px;
-  background: #ffffff;
+  max-height: 676px;
+  background: #FFFFFF;
 }
-main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text2 h3 {
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text2 {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text2 .main__information-all-text2-text {
   font-style: normal;
   font-weight: 400;
   font-size: 33px;
@@ -653,9 +727,15 @@ main .main__conteyner-bisness .main__information-all .main__information-all-text
   padding: 173px 64px;
 }
 @media (max-width: 768px) {
-  main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text2 h3 {
+  main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text2 .main__information-all-text2-text {
     font-size: 28px;
     padding: 63px 35px;
+  }
+}
+@media (max-width: 360px) {
+  main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text2 .main__information-all-text2-text {
+    font-size: 25px;
+    padding: 15px 25px;
   }
 }
 main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text3 {
@@ -666,19 +746,31 @@ main .main__conteyner-bisness .main__information-all .main__information-all-text
   justify-content: space-between;
   padding: 64px;
 }
-main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text3 .main__information-all-text4 p {
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text3 {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+  }
+}
+main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text3 .main__information-all-text4 span {
   font-weight: 400;
   font-size: 28px;
   color: #000000;
 }
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__information-all .main__information-all-text .main__information-all-text3 .main__information-all-text4 span {
+    font-size: 32px;
+  }
+}
 main .main__conteyner-bisness .main__prenumerera-information {
+  width: 100%;
   max-width: 1200px;
-  height: 511px;
+  height: 500px;
   background: #213f39;
-  padding: 146px 155px 251px 155px;
+  padding: 146px 230px 251px 155px;
   display: flex;
   justify-content: center;
-  flex: 0 1 50%;
 }
 @media (max-width: 768px) {
   main .main__conteyner-bisness .main__prenumerera-information {
@@ -687,42 +779,101 @@ main .main__conteyner-bisness .main__prenumerera-information {
   }
 }
 @media (max-width: 360px) {
+  main .main__conteyner-bisness .main__prenumerera-information {
+    flex-wrap: wrap;
+  }
   main .main__conteyner-bisness .main__prenumerera-information img {
     padding-top: 25px;
   }
 }
-main .main__conteyner-bisness .main__prenumerera-information .main__prenumerera-all-information {
+main .main__conteyner-bisness .main__prenumerera-all-information {
   width: 100%;
 }
-main .main__conteyner-bisness .main__prenumerera-information .main__prenumerera-all-information h2 {
+main .main__conteyner-bisness .main__prenumerera-all-information .main__prenumerera-all-information-text2 {
+  max-width: 300px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-top: 17px;
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__prenumerera-all-information .main__prenumerera-all-information-text2 {
+    max-width: 200px;
+  }
+}
+main .main__conteyner-bisness .main__prenumerera-all-information .main__prenumerera-all-information-text {
   max-width: 360px;
   font-weight: 400;
   font-size: 48px;
-  color: #ffffff;
-}
-main .main__conteyner-bisness .main__prenumerera-information .main__prenumerera-all-information p {
-  max-width: 360px;
-  font-weight: 400;
-  font-size: 20px;
-  color: #ffffff;
-  padding-top: 17px;
-}
-main .main__conteyner-bisness .main__prenumerera-information .main__completely-empty {
-  width: 100%;
-}
-main .main__conteyner-bisness .main__prenumerera-information .main__completely-empty h2 {
-  max-width: 474px;
-  border-bottom: #ffffff solid 1px;
-  padding-top: 62px;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  main .main__conteyner-bisness .main__prenumerera-information .main__completely-empty h2 {
-    padding-top: 47px;
+  main .main__conteyner-bisness .main__prenumerera-all-information .main__prenumerera-all-information-text {
+    font-size: 30px;
+    max-width: 280px;
   }
 }
-main .main__conteyner-bisness .main__prenumerera-information .main__completely-empty .main__completely-empty-arrow {
-  padding-top: 32px;
+main .main__conteyner-bisness .main__completely-empty {
+  min-height: 100%;
+  width: 360px;
+  height: 112px;
+  display: flex;
+}
+main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-arrow {
+  padding-top: 20px;
   text-align: end;
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-arrow {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 360px) {
+  main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-arrow img {
+    padding-top: 5px;
+  }
+}
+main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-form-name .main__completely-empty-form-name-name .main__completely-empty-form-name-name1 input {
+  width: 390px;
+  height: 40px;
+  background-color: #213f39;
+  margin-bottom: 5px;
+  border: 0;
+  border-bottom: #fff solid 1px;
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-form-name .main__completely-empty-form-name-name .main__completely-empty-form-name-name1 input {
+    width: 260px;
+    height: 26px;
+  }
+}
+main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-form-name .main__completely-empty-form-name-name .main__completely-empty-form-name-name2 input {
+  width: 390px;
+  height: 40px;
+  background-color: #213f39;
+  margin-bottom: 5px;
+  border: 0;
+  border-bottom: #fff solid 1px;
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-form-name .main__completely-empty-form-name-name .main__completely-empty-form-name-name2 input {
+    width: 260px;
+    height: 26px;
+  }
+}
+main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-form-name .main__completely-empty-form-name-name .main__completely-empty-form-name-name3 input {
+  width: 390px;
+  height: 40px;
+  background-color: #213f39;
+  margin-bottom: 5px;
+  border: 0;
+  border-bottom: #fff solid 1px;
+}
+@media (max-width: 768px) {
+  main .main__conteyner-bisness .main__completely-empty .main__completely-empty-form .main__completely-empty-form-name .main__completely-empty-form-name-name .main__completely-empty-form-name-name3 input {
+    width: 260px;
+    height: 26px;
+  }
 }
 
 footer {
@@ -759,7 +910,7 @@ footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-in
 @media (max-width: 360px) {
   footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-logo {
     padding: 15px 20px;
-    padding-top: 30px;
+    padding-top: 15px;
   }
 }
 footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info1 {
@@ -772,11 +923,11 @@ footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-in
     display: none;
   }
 }
-footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info1 p {
+footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info1 span {
   padding-bottom: 5px;
   font-weight: 400;
   font-size: 19px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info2 .footer__aside-inform-info2-list {
   display: flex;
@@ -786,15 +937,15 @@ footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-in
     padding-top: 30px;
   }
 }
-footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info2 .footer__aside-inform-info2-list p {
+footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info2 .footer__aside-inform-info2-list span {
   padding-bottom: 5px;
   font-weight: 400;
   font-size: 19px;
-  color: #ffffff;
+  color: #FFFFFF;
   padding-right: 9px;
 }
 @media (max-width: 360px) {
-  footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info2 .footer__aside-inform-info2-list p {
+  footer .footer__conteyner .footer__aside .footer__aside-inform .footer__aside-inform-info2 .footer__aside-inform-info2-list span {
     padding-top: 25px;
     padding-right: 15px;
     font-size: 22px;
@@ -806,6 +957,7 @@ footer .footer__conteyner .footer__aside2 {
   width: 100%;
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 @media (max-width: 360px) {
   footer .footer__conteyner .footer__aside2 {
@@ -813,10 +965,11 @@ footer .footer__conteyner .footer__aside2 {
   }
 }
 footer .footer__conteyner .footer__aside2 .footer__aside2-dopinfo p {
+  display: block;
   padding-bottom: 5px;
   font-weight: 400;
   font-size: 19px;
-  color: #ffffff;
+  color: #fff;
   padding-right: 9px;
 }
 footer .footer__conteyner2 {
@@ -838,5 +991,5 @@ footer .footer__conteyner2 .footer__dop-info p {
   padding-bottom: 2px;
   font-weight: 400;
   font-size: 13px;
-  color: #ffffff;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

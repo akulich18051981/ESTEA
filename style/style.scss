@@ -1,3 +1,6 @@
+@import url(//vars/_vars.scss);
+
+
 * {
   margin: 0;
   padding: 0;
@@ -17,14 +20,6 @@ header {
     min-height: 100%;
     height: 640px;
     position: relative;
-    @media (max-width: 768px) {
-      background-image: url(/imeg/fonheader768.png);
-      height: 410px;
-    }
-    @media (max-width: 360px) {
-      background-image: url(/imeg/fonheader360.png);
-      height: 119px;
-    }
     @media (max-width: 1000px) {
       background-image: url(/imeg/fonheader1000.png);
       height: 530px;
@@ -33,9 +28,17 @@ header {
       background-image: url(/imeg/fonheader920.png);
       height: 490px;
     }
+    @media (max-width: 768px) {
+      background-image: url(/imeg/fonheader768.png);
+      height: 410px;
+    }
     @media (max-width: 650px) {
       background-image: url(/imeg/fonheader650.png);
       height: 345px;
+    }
+    @media (max-width: 360px) {
+      background-image: url(/imeg/fonheader360.png);
+      height: 192px;
     }
     .header__wrapper-fone-list {
       position: absolute;
@@ -61,8 +64,8 @@ header {
         padding: 40px 0 140px 25px;
       }
       @media (max-width: 360px) {
-        font-size: 25px;
-        padding: 40px 0 140px 25px;
+        font-size: 23px;
+        padding: 40px 0 80px 15px;
       }
     }
   }
@@ -93,15 +96,19 @@ header {
   }
 }
 .header__box-text2 {
-  max-width: 950px;
-  min-height: 168px;
+  width: 950px;
+  height: 168px;
   background: #d4cc33;
   display: flex;
   flex: 0 1 50%;
   justify-content: space-between;
   @media (max-width: 768px) {
-    max-width: 100%;
-    min-height: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 360px) {
+    width: 100%;
+    height: 0px;
   }
   .header__box-title-info {
     padding: 64px;
@@ -114,7 +121,7 @@ header {
     }
     @media (max-width: 360px) {
       font-size: 25px;
-      padding: 28px;
+      padding: 18px;
     }
   }
   .arrow {
@@ -128,6 +135,9 @@ header {
       margin-right: 35px;
       margin-top: 20px;
       margin-bottom: 20px;
+    }
+    @media (max-width: 360px) {
+      
     }
   }
 }
@@ -292,7 +302,7 @@ main {
         padding-right: 25px;
       }
       .main__aside {
-        h2 {
+        .main__aside-text {
           padding-top: 97px;
           padding-bottom: 57px;
           font-weight: 400;
@@ -355,11 +365,17 @@ main {
     @media (max-width: 768px) {
       padding: 27px 25px;
     }
+    @media (max-width: 360px) {
+      padding: 10px 15px;
+    }
     .main__content {
       padding: 107px 277px 107px 64px;
       background-color: $colorwhite;
       @media (max-width: 768px) {
         padding: 25px 0 0 0;
+      }
+      @media (max-width: 360px) {
+        padding: 10px 0 0 0;
       }
       .main__content-text {
         font-weight: 400;
@@ -377,8 +393,8 @@ main {
           font-size: 38px;
         }
         @media (max-width: 360px) {
-          font-size: 25px;
-          padding-bottom: 20px;
+          font-size: 23px;
+          padding-bottom: 15px;
         }
       }
       .main__content-text3 {
@@ -395,31 +411,39 @@ main {
     font-family: $font;
     max-width: 1200px;
     height: 768px;
+    max-height: 1000px;
     margin: 0 auto;
     display: flex;
-    flex: 0 1 50%;
-    @media (max-width: 768px) {
-      display: none;
-    }
-    .main__wrapper-aside-conteyner {
-      .main__wrapper-aside-plan {
-        background-image: url(/imeg/plan.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
+    .main__wrapper-aside-plan {
+      background-image: url(/imeg/plan.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50%;
+      @media (max-width: 1000px) {
+        width: 30%;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
     .main__wrapper-aside-info {
       padding: 66px 64px 0 64px;
       background: #a6998c;
-      max-height: 768px;
+      width: 50%;
+      @media (max-width: 1000px) {
+        width: 70%;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 15px 15px;
+      }
       .items {
         padding-bottom: 12px;
       }
       .items2 {
         padding-top: 12px;
         border-top: #000 solid 1px;
+        max-width: 730px;
       }
       table {
         font-weight: 400;
@@ -427,6 +451,7 @@ main {
         color: #000000;
         text-align: left;
         vertical-align: auto;
+        width: 100%;
         td {
           border-top: #000 solid 1px;
           width: 235px;
@@ -439,18 +464,21 @@ main {
     }
   }
   .main__conteyner-bisness {
+    display: flex;
+    flex-wrap: wrap;
     font-family: $font;
     max-width: 1200px;
     margin: 0 auto;
     @media (max-width: 360px) {
-      display: none;
+      width: 100%;
     }
     .main__bisness-box {
       display: flex;
-      flex: 0 1 33.333%;
+      width: 100%;
       @media (max-width: 360px) {
         display: inline-block;
         width: 100%;
+        text-align: center;
       }
       .main__bisness1 {
         width: 33.333%;
@@ -462,7 +490,7 @@ main {
         }
         @media (max-width: 768px) {
           width: 100%;
-          padding: 25px 30px 25px 30px;
+          padding: 15px 15px;
         }
         .main__bisness1-text {
           font-weight: 400;
@@ -472,6 +500,9 @@ main {
           @media (max-width: 768px) {
             font-size: 20px;
             padding-top: 38px;
+          }
+          @media (max-width: 360px) {
+            padding-top: 8px;
           }
         }
       }
@@ -485,7 +516,7 @@ main {
         }
         @media (max-width: 768px) {
           width: 100%;
-          padding: 25px 30px 25px 30px;
+          padding: 15px 15px;
         }
         .main__bisness2-text {
           font-weight: 400;
@@ -495,6 +526,9 @@ main {
           @media (max-width: 768px) {
             font-size: 20px;
             padding-top: 48px;
+          }
+          @media (max-width: 360px) {
+            padding-top: 8px;
           }
         }
       }
@@ -508,131 +542,213 @@ main {
         }
         @media (max-width: 768px) {
           width: 100%;
-          padding: 25px 30px 25px 30px;
+          padding: 15px 15px;
+          min-width: 250px;
         }
         .main__bisness3-text {
           font-weight: 400;
           font-size: 30px;
-          color: #000000;
+          color: #ffffff;
           padding-top: 168px;
           @media (max-width: 768px) {
             font-size: 20px;
             padding-top: 38px;
+          }
+          @media (max-width: 360px) {
+            padding-top: 15px;
           }
         }
       }
     }
   }
   .main__conteyner-bisness {
+    @media (max-width: 768px) {
+      width: 100%px;
+      height: 100%;
+    }
     .main__information-all {
       display: flex;
-      flex: 0 1 50%;
       height: 844px;
-      .main__information-all2 {
-        background-image: url(/imeg/flouver2.png);
-        width: 100%;
+      @media (max-width: 768px) {
+        width: 100%px;
         height: 100%;
       }
+      .main__information-all2 {
+        background-image: url(//imeg/flouver2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
       .main__information-all-text {
-        width: 50%;
-        height: 844px;
+        width: 100%;
+        height: 100%;
+        @media (max-width: 768px) {
+          width: 100%;
+          height: 100%;
+        }
         .main__information-all-text2 {
-          max-width: 50%px;
-          height: 676px;
+          width: 60%px;
+          max-height: 100%;
           background: $colorwhite;
+          @media (max-width: 768px) {
+            width: 100%;
+            height: 100%;
+          }
           .main__information-all-text2-text {
             font-style: normal;
             font-weight: 400;
             font-size: 33px;
             color: #000000;
-            padding: 173px 64px;
+            padding: 200px 64px;
             @media (max-width: 768px) {
               font-size: 28px;
               padding: 63px 35px;
             }
+            @media (max-width: 360px) {
+              font-size: 25px;
+              padding: 15px 25px;
+            }
           }
         }
         .main__information-all-text3 {
-          width: 600px;
+          width: 575px;
           height: 168px;
           background: #d4cc33;
           display: flex;
           justify-content: space-between;
           padding: 64px;
+          @media (max-width: 768px) {
+            width: 100%;
+            height: 100%;
+            padding: 24px;
+          }
           .main__information-all-text4 {
-            p {
+            span {
               font-weight: 400;
               font-size: 28px;
               color: #000000;
+              @media (max-width: 768px) {
+                font-size: 32px;
+              }
             }
           }
         }
       }
     }
     .main__prenumerera-information {
+      width: 100%;
       max-width: 1200px;
       height: 500px;
       background: #213f39;
-      // padding: 146px 155px 251px 155px;
+      padding: 146px 230px 251px 155px;
       display: flex;
       justify-content: center;
-      flex: 0 1 50%;
       @media (max-width: 768px) {
         padding: 36px 25px;
         height: 100%;
       }
       @media (max-width: 360px) {
+        flex-wrap: wrap;
         img {
           padding-top: 25px;
         }
       }
-      .main__prenumerera-all-information {
-        width: 100%;
-        .main__prenumerera-all-information-text2 {
-          max-width: 360px;
-          font-weight: 400;
-          font-size: 20px;
-          color: $colorwhite;
-          padding-top: 17px;
-        }
-        .main__prenumerera-all-information-text {
-          max-width: 360px;
-          font-weight: 400;
-          font-size: 48px;
-          color: $colorwhite;
-          padding-top: 17px;
+    }
+    .main__prenumerera-all-information {
+      width: 100%;
+      .main__prenumerera-all-information-text2 {
+        max-width: 300px;
+        font-weight: 400;
+        font-size: 20px;
+        color: $colorwhite;
+        margin-top: 17px;
+        @media (max-width: 768px) {
+          max-width: 200px;
         }
       }
-      .main__completely-empty {
-        min-height: 100%;
-        width: 360px;
-        height: 112px;
-
-        .main__completely-empty-form {
-          .main__completely-empty-form-name {
-            .main__completely-empty-form-name-name {
-              .main__completely-empty-form-name-name1{
-
+      .main__prenumerera-all-information-text {
+        max-width: 360px;
+        font-weight: 400;
+        font-size: 48px;
+        color: $colorwhite;
+        @media (max-width: 768px) {
+          font-size: 30px;
+          max-width: 280px;
+        }
+      }
+    }
+    .main__completely-empty {
+      min-height: 100%;
+      width: 360px;
+      height: 112px;
+      display: flex;
+      .main__completely-empty-form {
+        .main__completely-empty-arrow {
+          padding-top: 20px;
+          text-align: end;
+          @media (max-width: 768px) {
+            padding-top: 10px;
+          }
+          img {
+            @media (max-width: 360px) {
+              padding-top: 5px;
+            }
+          }
+        }
+        .main__completely-empty-form-name {
+          .main__completely-empty-form-name-name {
+            .main__completely-empty-form-name-name1 {
+              input {
+                width: 390px;
+                height: 40px;
+                background-color: #213f39;
+                margin-bottom: 5px;
+                border: 0;
+                border-bottom: #fff solid 1px;
+                @media (max-width: 768px) {
+                  width: 260px;
+                  height: 26px;
+                }
               }
-              .main__completely-empty-form-name-name2{
-
+            }
+            .main__completely-empty-form-name-name2 {
+              input {
+                width: 390px;
+                height: 40px;
+                background-color: #213f39;
+                margin-bottom: 5px;
+                border: 0;
+                border-bottom: #fff solid 1px;
+                @media (max-width: 768px) {
+                  width: 260px;
+                  height: 26px;
+                }
               }
-              .main__completely-empty-form-name-name3{
-
+            }
+            .main__completely-empty-form-name-name3 {
+              input {
+                width: 390px;
+                height: 40px;
+                background-color: #213f39;
+                margin-bottom: 5px;
+                border: 0;
+                border-bottom: #fff solid 1px;
+                @media (max-width: 768px) {
+                  width: 260px;
+                  height: 26px;
+                }
               }
-
             }
           }
         }
       }
     }
   }
-  .main__completely-empty-arrow {
-    padding-top: 12px;
-    text-align: end;
-  }
 }
-
 footer {
   width: 100%;
   .footer__conteyner {
@@ -659,7 +775,7 @@ footer {
           }
           @media (max-width: 360px) {
             padding: 15px 20px;
-            padding-top: 30px;
+            padding-top: 15px;
           }
         }
         .footer__aside-inform-info1 {
@@ -716,14 +832,13 @@ footer {
           padding-bottom: 5px;
           font-weight: 400;
           font-size: 19px;
-          color: white;
+          color: #fff;
           padding-right: 9px;
         }
       }
     }
   }
   .footer__conteyner2 {
-    
     font-family: $font;
     max-width: 1200px;
     height: 100%;
@@ -736,7 +851,6 @@ footer {
       padding: 20px 0;
     }
     .footer__dop-info {
-      
       p {
         padding-bottom: 2px;
         font-weight: 400;
