@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 header {
   .conteyner {
     font-family: $font;
@@ -38,7 +37,7 @@ header {
       background-image: url(/imeg/fonheader650.png);
       height: 345px;
     }
-    h1 {
+    .header__wrapper-fone-list {
       position: absolute;
       font-family: $font;
       font-style: normal;
@@ -77,8 +76,7 @@ header {
     max-width: 100%;
     min-height: 0px;
   }
-
-  h2 {
+  .header__box-text-info {
     padding: 86px 65px;
     font-family: $font;
     font-style: normal;
@@ -105,8 +103,7 @@ header {
     max-width: 100%;
     min-height: 0px;
   }
-
-  h2 {
+  .header__box-title-info {
     padding: 64px;
     font-family: $font;
     font-weight: 400;
@@ -146,7 +143,6 @@ header {
   display: flex;
   flex: 0 1 50%;
 }
-
 main {
   .main-conteyner {
     display: flex;
@@ -165,8 +161,7 @@ main {
       max-width: 33%;
       height: 100%;
       padding-right: 40px;
-
-      h3 {
+      .main__inform-text {
         border-bottom: 1px #000 solid;
         padding-bottom: 31px;
         padding-top: 91px;
@@ -187,7 +182,6 @@ main {
           padding-top: 13px;
         }
       }
-
       .main__form-data {
         font-weight: 400;
         font-size: 16px;
@@ -237,7 +231,6 @@ main {
     @media (max-width: 360px) {
       height: 300px;
     }
-
     .main__wrapper-description {
       background-color: #a6998c;
       max-width: 50%;
@@ -257,7 +250,7 @@ main {
         max-height: 100%;
         background-color: #a6998cab;
       }
-      p {
+      .main__wrapper-description-text {
         font-weight: 400;
         font-size: 20px;
         color: #000000;
@@ -316,7 +309,7 @@ main {
             font-size: 20px;
           }
         }
-        h3 {
+        .main__aside-text2 {
           font-weight: 400;
           font-size: 34px;
           color: $colorwhite;
@@ -338,9 +331,8 @@ main {
       }
       .main__aside2 {
         padding: 42px 64px 74px 64px;
-
         .main__aside2-info {
-          h3 {
+          .main__aside2-info-text {
             bottom: 0px;
             font-family: $font;
             font-weight: 400;
@@ -369,14 +361,13 @@ main {
       @media (max-width: 768px) {
         padding: 25px 0 0 0;
       }
-
-      p {
+      .main__content-text {
         font-weight: 400;
         font-size: 20px;
         color: #000000;
         padding-bottom: 8px;
       }
-      h2 {
+      .main__content-text2 {
         font-weight: 400;
         font-size: 48px;
         color: #000000;
@@ -390,7 +381,7 @@ main {
           padding-bottom: 20px;
         }
       }
-      h3 {
+      .main__content-text3 {
         font-weight: 400;
         font-size: 34px;
         color: #000000;
@@ -461,7 +452,6 @@ main {
         display: inline-block;
         width: 100%;
       }
-
       .main__bisness1 {
         width: 33.333%;
         padding: 50px 60px 50px 60px;
@@ -474,8 +464,7 @@ main {
           width: 100%;
           padding: 25px 30px 25px 30px;
         }
-
-        h3 {
+        .main__bisness1-text {
           font-weight: 400;
           font-size: 30px;
           color: #000000;
@@ -498,7 +487,7 @@ main {
           width: 100%;
           padding: 25px 30px 25px 30px;
         }
-        h3 {
+        .main__bisness2-text {
           font-weight: 400;
           font-size: 30px;
           color: #000000;
@@ -521,7 +510,7 @@ main {
           width: 100%;
           padding: 25px 30px 25px 30px;
         }
-        h3 {
+        .main__bisness3-text {
           font-weight: 400;
           font-size: 30px;
           color: #000000;
@@ -539,7 +528,6 @@ main {
       display: flex;
       flex: 0 1 50%;
       height: 844px;
-
       .main__information-all2 {
         background-image: url(/imeg/flouver2.png);
         width: 100%;
@@ -552,8 +540,7 @@ main {
           max-width: 50%px;
           height: 676px;
           background: $colorwhite;
-
-          h3 {
+          .main__information-all-text2-text {
             font-style: normal;
             font-weight: 400;
             font-size: 33px;
@@ -572,7 +559,6 @@ main {
           display: flex;
           justify-content: space-between;
           padding: 64px;
-
           .main__information-all-text4 {
             p {
               font-weight: 400;
@@ -585,9 +571,9 @@ main {
     }
     .main__prenumerera-information {
       max-width: 1200px;
-      height: 511px;
+      height: 500px;
       background: #213f39;
-      padding: 146px 155px 251px 155px;
+      // padding: 146px 155px 251px 155px;
       display: flex;
       justify-content: center;
       flex: 0 1 50%;
@@ -602,39 +588,51 @@ main {
       }
       .main__prenumerera-all-information {
         width: 100%;
-
-        h2 {
-          max-width: 360px;
-          font-weight: 400;
-          font-size: 48px;
-          color: $colorwhite;
-        }
-        p {
+        .main__prenumerera-all-information-text2 {
           max-width: 360px;
           font-weight: 400;
           font-size: 20px;
           color: $colorwhite;
           padding-top: 17px;
         }
+        .main__prenumerera-all-information-text {
+          max-width: 360px;
+          font-weight: 400;
+          font-size: 48px;
+          color: $colorwhite;
+          padding-top: 17px;
+        }
       }
       .main__completely-empty {
-        width: 100%;
-        h2 {
-          max-width: 474px;
-          border-bottom: $colorwhite solid 1px;
-          padding-top: 62px;
-          @media (max-width: 768px) {
-            padding-top: 47px;
+        min-height: 100%;
+        width: 360px;
+        height: 112px;
+
+        .main__completely-empty-form {
+          .main__completely-empty-form-name {
+            .main__completely-empty-form-name-name {
+              .main__completely-empty-form-name-name1{
+
+              }
+              .main__completely-empty-form-name-name2{
+
+              }
+              .main__completely-empty-form-name-name3{
+
+              }
+
+            }
           }
-        }
-        .main__completely-empty-arrow {
-          padding-top: 32px;
-          text-align: end;
         }
       }
     }
   }
+  .main__completely-empty-arrow {
+    padding-top: 12px;
+    text-align: end;
+  }
 }
+
 footer {
   width: 100%;
   .footer__conteyner {
@@ -647,14 +645,11 @@ footer {
     background: #213f39;
     .footer__aside {
       display: flex;
-      
       flex: 0 1 33.333%;
-
       .footer__aside-inform {
         width: 50%;
         display: flex;
         justify-content: baseline;
-
         .footer__aside-inform-logo {
           padding-left: 95px;
           padding-right: 66px;
@@ -674,7 +669,7 @@ footer {
           @media (max-width: 360px) {
             display: none;
           }
-          p {
+          span {
             padding-bottom: 5px;
             font-weight: 400;
             font-size: 19px;
@@ -689,8 +684,7 @@ footer {
                 padding-top: 30px;
               }
             }
-
-            p {
+            span {
               padding-bottom: 5px;
               font-weight: 400;
               font-size: 19px;
@@ -712,22 +706,24 @@ footer {
       width: 100%;
       display: flex;
       justify-content: center;
+      color: #fff;
       @media (max-width: 360px) {
         display: none;
       }
-
       .footer__aside2-dopinfo {
         p {
+          display: block;
           padding-bottom: 5px;
           font-weight: 400;
           font-size: 19px;
-          color: $colorwhite;
+          color: white;
           padding-right: 9px;
         }
       }
     }
   }
   .footer__conteyner2 {
+    
     font-family: $font;
     max-width: 1200px;
     height: 100%;
@@ -740,6 +736,7 @@ footer {
       padding: 20px 0;
     }
     .footer__dop-info {
+      
       p {
         padding-bottom: 2px;
         font-weight: 400;
